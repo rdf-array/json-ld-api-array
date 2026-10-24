@@ -299,6 +299,7 @@
     "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:HtmlTest"],
     "name": "Transforms embedded JSON-LD script element",
     "purpose": "Tests embedded JSON-LD in HTML",
+    "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
     "input": "html/r001-in.html",
     "expect": "html/r001-out.nq",
     "option": {"specVersion": "json-ld-1.1", "processorFeature": "HTML Script Extraction"}
@@ -307,6 +308,7 @@
     "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:HtmlTest"],
     "name": "Transforms first embedded JSON-LD script element",
     "purpose": "Tests embedded JSON-LD in HTML",
+    "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
     "input": "html/r002-in.html",
     "expect": "html/r002-out.nq",
     "option": {
@@ -327,6 +329,7 @@
     "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:HtmlTest"],
     "name": "Expands all embedded JSON-LD script elements with extractAllScripts option",
     "purpose": "Tests embedded JSON-LD in HTML extracting all elements",
+    "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
     "input": "html/r004-in.html",
     "expect": "html/r004-out.nq",
     "option": {
@@ -339,6 +342,7 @@
     "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:HtmlTest"],
     "name": "Expands multiple embedded JSON-LD script elements where one is an array",
     "purpose": "Tests embedded JSON-LD in HTML extracting all elements with array",
+    "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
     "input": "html/r005-in.html",
     "expect": "html/r005-out.nq",
     "option": {

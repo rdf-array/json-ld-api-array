@@ -32,6 +32,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "Lists",
       "purpose": "Multiple lists with different types of element.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0004-in.nq",
       "expect": "fromRdf/0004-out.jsonld"
     }, {
@@ -39,6 +40,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "Document with list",
       "purpose": "Uses a named graph containing a list.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0005-in.nq",
       "expect": "fromRdf/0005-out.jsonld"
     }, {
@@ -46,6 +48,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "Two graphs having same subject but different values",
       "purpose": "Ensure that properties and list elements aren't confused between graphs.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0006-in.nq",
       "expect": "fromRdf/0006-out.jsonld"
     }, {
@@ -60,6 +63,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List conversion",
       "purpose": "Conversion of lists of lists (the triples in the input are only partially ordered on purpose (1.0 semantics)",
+      "rdfArrayNote": "rdf-array: JSON-LD 1.0 only: its ban on lists of lists cannot hold when nested lists are nested sequences; #tli03 is the 1.1 reading and holds under rdf-array",
       "input": "fromRdf/0008-in.nq",
       "expect": "fromRdf/0008-out.jsonld",
       "option": {"specVersion": "json-ld-1.0"}
@@ -68,6 +72,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List conversion with IRI nodes",
       "purpose": "Preserve IRI list nodes (i.e., not blank nodes) when converting to @list",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0009-in.nq",
       "expect": "fromRdf/0009-out.jsonld"
     }, {
@@ -75,6 +80,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List pattern without rdf:nil",
       "purpose": "Do not convert lists that are not terminated by rdf:nil to @list.",
+      "rdfArrayNote": "rdf-array: the input ladder is not well-formed for JSON-LD 1.1 (or uses rdf:nil as a subject), so it stays as ordinary rdf:first/rdf:rest triples, which the expected output shows as properties",
       "input": "fromRdf/0010-in.nq",
       "expect": "fromRdf/0010-out.jsonld"
     }, {
@@ -82,6 +88,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List pattern with extra properties",
       "purpose": "If additional properties are associated to a list node, the list is only partially converted to @list.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0011-in.nq",
       "expect": "fromRdf/0011-out.jsonld"
     }, {
@@ -89,6 +96,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List pattern with cycles",
       "purpose": "Detect lists containing cycles and do not convert them to @list.",
+      "rdfArrayNote": "rdf-array: the input ladder is not well-formed for JSON-LD 1.1 (or uses rdf:nil as a subject), so it stays as ordinary rdf:first/rdf:rest triples, which the expected output shows as properties",
       "input": "fromRdf/0012-in.nq",
       "expect": "fromRdf/0012-out.jsonld"
     }, {
@@ -96,6 +104,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List pattern with multiple values of rdf:first",
       "purpose": "Do not convert list nodes to @list if nodes contain more than one value for rdf:first.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0013-in.nq",
       "expect": "fromRdf/0013-out.jsonld"
     }, {
@@ -103,6 +112,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List pattern with multiple values of rdf:rest",
       "purpose": "Do not convert list nodes to @list if nodes contain more than one value for rdf:rest.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0014-in.nq",
       "expect": "fromRdf/0014-out.jsonld"
     }, {
@@ -110,6 +120,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List pattern with IRI rdf:rest",
       "purpose": "Do not convert lists to @list if a list node's rdf:rest is an IRI.",
+      "rdfArrayNote": "rdf-array: the input ladder is not well-formed for JSON-LD 1.1 (or uses rdf:nil as a subject), so it stays as ordinary rdf:first/rdf:rest triples, which the expected output shows as properties",
       "input": "fromRdf/0015-in.nq",
       "expect": "fromRdf/0015-out.jsonld"
     }, {
@@ -117,6 +128,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "List pattern with type rdf:List",
       "purpose": "List nodes may have a rdf:type rdf:List.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0016-in.nq",
       "expect": "fromRdf/0016-out.jsonld"
     }, {
@@ -151,6 +163,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "list with node shared across graphs",
       "purpose": "An otherwise conformant list with a node shared across different lists does not serialize using @list",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0020-in.nq",
       "expect": "fromRdf/0020-out.jsonld"
     }, {
@@ -158,6 +171,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "list with node shared across graphs (same triple in different graphs)",
       "purpose": "If a list node is used in different graphs, it isn't removed and converted to @list",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0021-in.nq",
       "expect": "fromRdf/0021-out.jsonld"
     }, {
@@ -165,6 +179,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "list from duplicate triples",
       "purpose": "Duplicate triples for a list node will not prevent @list from being properly generated",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0022-in.nq",
       "expect": "fromRdf/0022-out.jsonld"
     }, {
@@ -172,6 +187,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "triple with RDF nil subject",
       "purpose": "Test triple with RDF nil subject",
+      "rdfArrayNote": "rdf-array: the input ladder is not well-formed for JSON-LD 1.1 (or uses rdf:nil as a subject), so it stays as ordinary rdf:first/rdf:rest triples, which the expected output shows as properties",
       "input": "fromRdf/0023-in.nq",
       "expect": "fromRdf/0023-out.jsonld"
     }, {
@@ -193,6 +209,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "triple with rdf:first property and rdf:nil value",
       "purpose": "Check list generation with rdf:first property and rdf:nil value.",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/0026-in.nq",
       "expect": "fromRdf/0026-out.jsonld"
     }, {
@@ -404,6 +421,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "@list containing empty @list",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/li01-in.nq",
       "expect": "fromRdf/li01-out.jsonld",
       "option": {"specVersion": "json-ld-1.1"}
@@ -412,6 +430,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "@list containing multiple lists",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/li02-in.nq",
       "expect": "fromRdf/li02-out.jsonld",
       "option": {"specVersion": "json-ld-1.1"}
@@ -420,6 +439,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:FromRDFTest"],
       "name": "t0008 as interpreted for 1.1. ",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: the input N-Quads have a sequence term where they had a well-formed rdf:first/rdf:rest ladder (JSON-LD 1.1 list well-formedness), so the expected @list stands for that sequence; malformed or partial ladders keep their triples, as the expected output already shows",
       "input": "fromRdf/li03-in.nq",
       "expect": "fromRdf/li03-out.jsonld",
       "option": {"specVersion": "json-ld-1.1"}

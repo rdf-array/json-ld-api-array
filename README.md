@@ -1,3 +1,8 @@
+<img src=".github/rdf-array-logo.png" alt="[json-ld-api]" width="96" align="right">
+
+# json-ld-api-array: json-ld-api for rdf-array
+
+**rdf-array** fork of [json-ld-api](https://github.com/w3c/json-ld-api): the JSON-LD 1.1 API test suite with its RDF expectations rewritten for rdf-array: a JSON-LD `@list` is one sequence term, so the `toRdf` and `html` expectations and the `fromRdf` inputs have `( … )` where they had `rdf:first`/`rdf:rest` ladders. The specification text is unchanged. New tests live in [json-ld-api-contrib](https://github.com/rdf-array/json-ld-api-contrib). Branch `rdf-sequences`, published at <https://rdf-array.github.io/json-ld-api-array/>; what changed and how it was checked is in [doc/rdf-array.md](doc/rdf-array.md). Part of the [rdf-array](https://github.com/rdf-array/rdf-array) organisation.
 
 ![W3C Logo](https://www.w3.org/Icons/w3c_home)
 

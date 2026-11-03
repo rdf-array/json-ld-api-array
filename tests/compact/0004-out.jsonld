@@ -9,7 +9,7 @@
   "myset2": [],
   "myset3": ["v1"],
   "http://example.org/list1": {"@list": []},
-  "http://example.org/list2": {"@list": []},
+  "http://example.org/list2": {"@list": [null]},
   "http://example.org/set1": [],
   "http://example.org/set2": [],
   "http://example.org/set3": [],

@@ -1,7 +1,7 @@
 <http://example.org/id> <http://example.com/mylist1> () .
 <http://example.org/id> <http://example.com/mylist2> ("one item") .
 <http://example.org/id> <http://example.com/myset3> "v1" .
-<http://example.org/id> <http://example.org/list1> () .
+<http://example.org/id> <http://example.org/list1> (undef) .
 <http://example.org/id> <http://example.org/list2> () .
 <http://example.org/id> <http://example.org/property> ("one item") .
 <http://example.org/id> <http://example.org/set5> "one item" .
